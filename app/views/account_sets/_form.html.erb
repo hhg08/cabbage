@@ -1,0 +1,46 @@
+<%= form_for(@account_set) do |f| %>
+  <% if @account_set.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@account_set.errors.count, "error") %> prohibited this account_set from being saved:</h2>
+      <ul>
+      <% @account_set.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div>
+      <label>cookie_mapping_url:</label>
+      <%= f.text_field :mapping_url %>
+    </div>
+    <div>
+      <label>bid_url:</label>
+      <%= f.text_field :bid_url %>
+    </div>
+    <div>
+      <label>win_notice_url:</label>
+      <%= f.text_field :win_notice_url %>
+    </div>
+    <div>
+      <label>qps:</label>
+      <%= f.text_field :qps %>
+    </div>
+    <div>
+      <label>no_cm_response:</label>
+      <%= f.text_field :no_cm_response %>
+    </div>
+
+    <div>
+      <label>use_tuserinfo:</label>
+      <%= f.text_field :use_tuserinfo %>
+    </div>
+
+    <div>
+      <label>rtb_msg_format:</label>
+      <%= f.text_field :rtb_msg_format %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit "提交" %>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+company:
+  14: '上海巨人统平网络科技有限公司'
+  6:  '上海巨人统平网络科技有限公司'
+  15: "广州网易计算机系统有限公司"

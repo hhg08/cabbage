@@ -1,0 +1,27 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+connection:
+    development:
+        host: '123.59.25.137'
+        port: 5672
+        ssl:  false
+        vhost:  '/'
+        user: "hhg08"
+        pass: "123456"
+        heartbeat: :server
+        frame_max: 131072
+        auth_mechanism: "PLAIN"
+    production:
+        host: '123.59.25.123'
+        port: 5672
+        ssl:  false
+        vhost:  '/'
+        user: "admin"
+        pass: "admin12312015"
+        heartbeat: :server
+        frame_max: 131072
+        auth_mechanism: "PLAIN"
+

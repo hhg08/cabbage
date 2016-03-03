@@ -1,0 +1,20 @@
+  [1m[36m (1018.0ms)[0m  [1mselect *,hq_expand_ad.id as aid,hq_originality.id as oid,hq_originality.id as oname from hq_expand_ad_originality left join hq_originality on hq_expand_ad_originality.`r_originality_id`=hq_originality.id left join hq_expand_ad on hq_expand_ad_originality.`r_ad_id`=hq_expand_ad.id  left join hq_expand_ad_exchange on hq_expand_ad.id= hq_expand_ad_exchange.expand_id where  plantform='iqiyi' AND status_iqiyi=4 group by r_originality_id[0m
+  [1m[35mOriginality Load (225.8ms)[0m  SELECT  `hq_originality`.* FROM `hq_originality` WHERE `hq_originality`.`id` = 109 LIMIT 1
+  [1m[36m (222.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (224.5ms)[0m  COMMIT
+  [1m[36m (228.9ms)[0m  [1mselect *,hq_expand_ad.id as aid,hq_originality.id as oid,hq_originality.id as oname from hq_expand_ad_originality left join hq_originality on hq_expand_ad_originality.`r_originality_id`=hq_originality.id left join hq_expand_ad on hq_expand_ad_originality.`r_ad_id`=hq_expand_ad.id  left join hq_expand_ad_exchange on hq_expand_ad.id= hq_expand_ad_exchange.expand_id where  plantform='iqiyi' AND status_iqiyi=4 group by r_originality_id[0m
+  [1m[35mOriginality Load (227.1ms)[0m  SELECT  `hq_originality`.* FROM `hq_originality` WHERE `hq_originality`.`id` = 109 LIMIT 1
+  [1m[36m (225.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (226.8ms)[0m  COMMIT
+  [1m[36m (230.3ms)[0m  [1mselect *,hq_expand_ad.id as aid,hq_originality.id as oid,hq_originality.id as oname from hq_expand_ad_originality left join hq_originality on hq_expand_ad_originality.`r_originality_id`=hq_originality.id left join hq_expand_ad on hq_expand_ad_originality.`r_ad_id`=hq_expand_ad.id  left join hq_expand_ad_exchange on hq_expand_ad.id= hq_expand_ad_exchange.expand_id where  plantform='iqiyi' AND status_iqiyi=4 group by r_originality_id[0m
+  [1m[35mOriginality Load (229.7ms)[0m  SELECT  `hq_originality`.* FROM `hq_originality` WHERE `hq_originality`.`id` = 109 LIMIT 1
+  [1m[36m (223.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (225.5ms)[0m  COMMIT
+  [1m[36m (457.7ms)[0m  [1mselect *,hq_expand_ad.id as aid,hq_originality.id as oid,hq_originality.id as oname from hq_expand_ad_originality left join hq_originality on hq_expand_ad_originality.`r_originality_id`=hq_originality.id left join hq_expand_ad on hq_expand_ad_originality.`r_ad_id`=hq_expand_ad.id  left join hq_expand_ad_exchange on hq_expand_ad.id= hq_expand_ad_exchange.expand_id where  plantform='iqiyi' AND status_iqiyi=4 group by r_originality_id[0m
+  [1m[35mOriginality Load (1021.5ms)[0m  SELECT  `hq_originality`.* FROM `hq_originality` WHERE `hq_originality`.`id` = 109 LIMIT 1
+  [1m[36m (224.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (224.1ms)[0m  COMMIT
+  [1m[36m (235.0ms)[0m  [1mselect *,hq_expand_ad.id as aid,hq_originality.id as oid,hq_originality.id as oname from hq_expand_ad_originality left join hq_originality on hq_expand_ad_originality.`r_originality_id`=hq_originality.id left join hq_expand_ad on hq_expand_ad_originality.`r_ad_id`=hq_expand_ad.id  left join hq_expand_ad_exchange on hq_expand_ad.id= hq_expand_ad_exchange.expand_id where  plantform='iqiyi' AND status_iqiyi=4 group by r_originality_id[0m
+  [1m[35mOriginality Load (229.1ms)[0m  SELECT  `hq_originality`.* FROM `hq_originality` WHERE `hq_originality`.`id` = 109 LIMIT 1
+  [1m[36m (228.9ms)[0m  [1mBEGIN[0m
+  [1m[35m (228.4ms)[0m  COMMIT

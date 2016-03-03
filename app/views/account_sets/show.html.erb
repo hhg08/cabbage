@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<%= @account_set.mapping_url %>
+<%= @account_set.bid_url %>
+<%= @account_set.win_notice_url %>
+<%= @account_set.qps %>
+<%= @account_set.no_cm_response %>
+<%=@account_set.rtb_msg_format %>
+<%=@account_set.use_tuserinfo %>
+<%= link_to '编辑', edit_account_set_path(@account_set) %> |
+<%= link_to '返回', account_sets_path %>

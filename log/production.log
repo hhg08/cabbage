@@ -1,0 +1,46 @@
+I, [2015-12-29T15:56:35.028635 #1765]  INFO -- : Started GET "/iqiyi/originality" for ::1 at 2015-12-29 15:56:35 +0800
+I, [2015-12-29T15:56:35.805650 #1765]  INFO -- : Processing by HomeController#iqiyi_origina_operation as HTML
+D, [2015-12-29T15:56:37.333240 #1765] DEBUG -- :   [1m[36m (164.8ms)[0m  [1mselect *,hq_expand_ad.id as aid,hq_originality.id as oid,hq_originality.name as oname,hq_package.device as i_platform, oe.id as oexid from hq_expand_ad_originality left join hq_originality on hq_expand_ad_originality.`r_originality_id`=hq_originality.id left join hq_expand_ad on hq_expand_ad_originality.`r_ad_id`=hq_expand_ad.id  left join hq_expand_ad_exchange on hq_expand_ad.id= hq_expand_ad_exchange.expand_id left join hq_package on hq_expand_ad.package = hq_package.id left join (select * from hq_originality_exchange where plantform ='iqiyi') oe on hq_originality.id= oe.originality_id where hq_expand_ad_exchange.plantform='iqiyi' AND
+			ifnull(oe.status,0)=0 AND ifnull(hq_originality.id,0)!=0 group by r_originality_id[0m
+D, [2015-12-29T15:56:39.617836 #1765] DEBUG -- :   [1m[35m (968.0ms)[0m  select *,hq_expand_ad.id as aid,hq_originality.id as oid,hq_package.device as i_platform, oe.id as oexid from hq_expand_ad_originality left join hq_originality on hq_expand_ad_originality.`r_originality_id`=hq_originality.id left join hq_expand_ad on hq_expand_ad_originality.`r_ad_id`=hq_expand_ad.id  left join hq_expand_ad_exchange on hq_expand_ad.id= hq_expand_ad_exchange.expand_id left join hq_package on hq_expand_ad.package = hq_package.id left join (select * from hq_originality_exchange where plantform ='iqiyi') oe on hq_originality.id= oe.originality_id where hq_expand_ad_exchange.plantform='iqiyi' AND
+			ifnull(oe.status,0)=4 AND ifnull(hq_originality.id,0)!=0 group by r_originality_id
+D, [2015-12-29T15:56:41.865862 #1765] DEBUG -- :   [1m[36mOriginalityExchange Load (153.2ms)[0m  [1mSELECT  `hq_originality_exchange`.* FROM `hq_originality_exchange` WHERE `hq_originality_exchange`.`id` = 173 LIMIT 1[0m
+D, [2015-12-29T15:56:42.025235 #1765] DEBUG -- :   [1m[35m (155.3ms)[0m  BEGIN
+D, [2015-12-29T15:56:42.178682 #1765] DEBUG -- :   [1m[36m (151.6ms)[0m  [1mCOMMIT[0m
+I, [2015-12-29T15:56:43.777449 #1765]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-12-29T15:56:43.777673 #1765]  INFO -- : Completed 200 OK in 7972ms (Views: 0.6ms | ActiveRecord: 2052.3ms)
+I, [2015-12-29T15:56:43.793050 #1765]  INFO -- : Started GET "/favicon.ico" for ::1 at 2015-12-29 15:56:43 +0800
+F, [2015-12-29T15:56:43.948084 #1765] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/haoqu/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/haoqu/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/haoqu/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+D, [2016-01-21T13:19:05.099677 #1876] DEBUG -- :   [1m[36mOriginality Load (3.9ms)[0m  [1mSELECT  `hq_originality`.* FROM `hq_originality` WHERE `hq_originality`.`id` = 137 LIMIT 1[0m
+D, [2016-01-21T13:19:06.742047 #1876] DEBUG -- :   [1m[35mOriginalityExchange Load (4.7ms)[0m  SELECT  `hq_originality_exchange`.* FROM `hq_originality_exchange` WHERE `hq_originality_exchange`.`originality_id` = 137 AND `hq_originality_exchange`.`plantform` = 'tencent'  ORDER BY `hq_originality_exchange`.`id` ASC LIMIT 1
+D, [2016-01-21T13:19:06.748814 #1876] DEBUG -- :   [1m[36m (2.8ms)[0m  [1mBEGIN[0m
+D, [2016-01-21T13:19:06.753473 #1876] DEBUG -- :   [1m[35mSQL (2.7ms)[0m  UPDATE `hq_originality_exchange` SET `reason` = '待审核' WHERE `hq_originality_exchange`.`id` = 210
+D, [2016-01-21T13:19:06.767731 #1876] DEBUG -- :   [1m[36m (13.7ms)[0m  [1mCOMMIT[0m
+D, [2016-01-21T13:19:37.727177 #1876] DEBUG -- :   [1m[35mOriginality Load (3.7ms)[0m  SELECT  `hq_originality`.* FROM `hq_originality` WHERE `hq_originality`.`id` = 137 LIMIT 1
+D, [2016-01-21T13:19:38.327560 #1876] DEBUG -- :   [1m[36mOriginalityExchange Load (7.1ms)[0m  [1mSELECT  `hq_originality_exchange`.* FROM `hq_originality_exchange` WHERE `hq_originality_exchange`.`originality_id` = 137 AND `hq_originality_exchange`.`plantform` = 'tencent'  ORDER BY `hq_originality_exchange`.`id` ASC LIMIT 1[0m
+D, [2016-01-21T13:19:38.337950 #1876] DEBUG -- :   [1m[35m (4.3ms)[0m  BEGIN
+D, [2016-01-21T13:19:38.341111 #1876] DEBUG -- :   [1m[36m (2.3ms)[0m  [1mCOMMIT[0m

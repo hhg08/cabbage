@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>账户设置信息列表</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @account_sets.each do |account_set| %>
+      <tr>
+        <td><%= account_set.mapping_url %></td>
+        <td><%= account_set.bid_url %></td>
+        <td><%= account_set.win_notice_url %></td>
+        <td><%= account_set.qps %></td>
+        <td><%= account_set.no_cm_response %></td>
+        <td><%=account_set.rtb_msg_format %></td>
+        <td><%=account_set.use_tuserinfo %></td>
+        <td><%= link_to '查看', account_set %></td>
+        <td><%= link_to '编辑', edit_account_set_path(account_set) %></td>
+        <td><%= link_to '删除', account_set, method: :delete, data: { confirm: '确定删除?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新建账户信息', new_account_set_path %>
